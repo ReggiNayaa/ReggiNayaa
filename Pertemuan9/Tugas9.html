@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tugas Pertemuan 9</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        h1 {
+            font-family: 'Georgia', serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Konversi Bilangan</h1>
+    <input type="text" id="inputAngka" placeholder="Masukkan Bilangan Desimal">
+    <button onclick="konversi()">Konversi</button>
+
+    <script>
+        function konversi() {
+            let nilai = document.getElementById("inputAngka").value;
+            let angka = parseInt(nilai);
+
+            if (isNaN(angka)) {
+                alert("Masukkan Angka yang benar!");
+            } else {
+                let biner = angka.toString(2);
+                let oktal = angka.toString(8);
+                let heksa = angka.toString(16).toUpperCase();
+                alert("Biner : " + biner + "\nOktal : " + oktal + "\nHeksadesimal: " + heksa);
+    }
+        }
+    </script>
+
+</body>
+</html>
